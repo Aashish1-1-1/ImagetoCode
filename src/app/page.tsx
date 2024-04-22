@@ -18,12 +18,9 @@ export default function Pages(){
 		e.preventDefault();
 		try{
 			const formData = new FormData(e.currentTarget);
-			formData.append('codeimg',src);
+			formData.append('codeimg',file);
 			console.log(src)
 			const response = await fetch('/api/backend',{
-			 headers: {
-                            "Content-Type": "Content-Type: multipart/form-data; boundary=---WebKitFormBoundary7MA4YWxkTrZu0gW",
-                        },
 			 method:'POST',
 			 body: formData,
 			});
