@@ -33,8 +33,9 @@ async function run() {
 }
 
 run().then(function(result){
-	console.log(result);
-});
+	 console.log(result)
+	});
 
+module.exports ={run}
 
 
