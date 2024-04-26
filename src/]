@@ -4,13 +4,12 @@ import { ColorRing } from "react-loader-spinner";
 
 import CodeBox from './codebox.tsx';
 
-let code:string="";
-let language:string=""
 export default function Pages(){
 	const [urlfile, setFile] = useState<string | null>(null);
 	const [loading, setLoading] = useState(false);
-	const [codebox, setCodebox] = useState(false);
-
+	const [codebox, setCodebox] = useState(true);
+	const src:string = "";
+	let result:object = "";
 	const handleFileChange = (e: React.FormEvent<HTMLInputElement>) => {
 		if (e.currentTarget.files && e.currentTarget.files.length > 0) {
 			const file = e.currentTarget.files[0];
@@ -34,9 +33,8 @@ export default function Pages(){
 			 body: urlfile,
 			});
 		if (response.ok) {
-    			    const result = await response.json();
-			    code=result.json.code;
-			    language=result.json.language;
+    			    result = await response.json();
+    			    console.log(result);
 			    setCodebox(true);
     			  } else {
     			    console.error('Failed to submit form');
@@ -45,7 +43,7 @@ export default function Pages(){
 		  	console.error('Error submitting form:', error);
 		}
 		setLoading(false)
-	};
+		};
    return ( 
     <>
      {loading?(
@@ -73,8 +71,7 @@ export default function Pages(){
      }
 
      {codebox?(
-     <div className="w-1/2 mx-auto bg-gray-100 p-6 rounded-lg shadow-lg">
-     <CodeBox code={code} language={language} showLineNumbers={true}/></div>):(<p6></p6>)}
+     <CodeBox code="Hello world" language="C++"/>):(<p6></p6>)}
    </>
    );
 }

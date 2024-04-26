@@ -14,14 +14,14 @@ function fileToGenerativePart(path, mimeType) {
   };
 }
 
-async function run() {
+async function run(path,name) {
   // For text-and-image input (multimodal), use the gemini-pro-vision model
   const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
 
   const prompt = "Give the snippet code in a format of object of key-value of keys language,code content, optimizability";
 
   const imageParts = [
-    fileToGenerativePart("./code.png", "image/png"),
+    fileToGenerativePart(path, "image/png"),
   ];
   const result = await model.generateContent([prompt, ...imageParts]);
   const response = await result.response;
@@ -32,9 +32,9 @@ async function run() {
   return json;
 }
 
-run().then(function(result){
-	 console.log(result)
-	});
+//run().then(function(result){
+//	 console.log(result)
+//	});
 
 module.exports ={run}
 
