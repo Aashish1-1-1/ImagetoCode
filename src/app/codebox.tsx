@@ -1,7 +1,6 @@
 import { CopyBlock, dracula } from 'react-code-blocks';
 
 export default function CodeBox({ code, language, showLineNumbers }) {
- console.log(code)
  return(
  <CopyBlock
     text={code}

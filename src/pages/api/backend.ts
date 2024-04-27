@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import {join} from 'path'
+import {join} from 'path';
 const fs = require("fs");
-const { exec } = require('node:child_process')
+const { exec } = require('node:child_process');
 
 
 const {run}=require('./gemini.ts');
@@ -32,7 +32,6 @@ const data = req.body;
 	 	 fs.writeFileSync(image, imageBuffer);
 	}
 	await run(path,"code.png").then(function(result){
-	 	console.log(result)
 		exec(`rm -r ${path}`,(err,output)=>{
 			if(err){
 				console.log("Couldn't delete file",err);

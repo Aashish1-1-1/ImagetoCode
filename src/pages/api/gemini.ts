@@ -18,7 +18,7 @@ async function run(path,name) {
   // For text-and-image input (multimodal), use the gemini-pro-vision model
   const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
 
-  const prompt = "Give the snippet code in a format of object of key-value of keys language,code content, optimizability";
+  const prompt = "Give the snippet code in a format of object of key-value of keys language,codesnippet, optimizability";
 
   const imageParts = [
     fileToGenerativePart(path, "image/png"),
@@ -29,6 +29,7 @@ async function run(path,name) {
   const str= response.candidates[0].content.parts[0].text;
   const jsontobe=str.slice(9,str.length-3);
   const json= JSON.parse(jsontobe);
+  console.log(json);
   return json;
 }
 
