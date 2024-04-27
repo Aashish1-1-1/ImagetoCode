@@ -36,7 +36,7 @@ export default function Pages(){
 		if (response.ok) {
     			    const result = await response.json();
 			    console.log(result);
-			    code=result.json.codesnippet;
+			    code=result.json.code_snippet;
 			    language=result.json.language;
 			    setCodebox(true);
     			  } else {

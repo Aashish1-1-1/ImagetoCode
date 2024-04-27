@@ -31,7 +31,7 @@ const data = req.body;
 	 	 // Write the buffer to a file
 	 	 fs.writeFileSync(image, imageBuffer);
 	}
-	await run(path,"code.png").then(function(result){
+	await run(path).then(function(result){
 		exec(`rm -r ${path}`,(err,output)=>{
 			if(err){
 				console.log("Couldn't delete file",err);
