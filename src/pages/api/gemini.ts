@@ -18,7 +18,7 @@ async function run(path) {
   // For text-and-image input (multimodal), use the gemini-pro-vision model
   const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
 
-  const prompt = "Give the snippet code in a format of object of key-value of keys language,code_snippet,optimizability every key must be in lower-case";
+  const prompt = "Initial knowledge to have:Optimized means in sense of time complexity or space complexity don't change the code to produce different result,change only if it minimizes time complexity or space complexity. Promt:Give the snippet code sametosame given in image in a format of object of key-value of keys language,code_snippet,optimized_code,changes_made bool every key must be in lower-case";
 
   const imageParts = [
     fileToGenerativePart(path, "image/png"),

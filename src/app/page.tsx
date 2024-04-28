@@ -1,15 +1,16 @@
 "use client"
 import React, { useState } from 'react';
 import { ColorRing } from "react-loader-spinner";
-
 import CodeBox from './codebox.tsx';
 
 let code:string="";
+let optimizedcode:string=""
 let language:string=""
 export default function Pages(){
 	const [urlfile, setFile] = useState<string | null>(null);
 	const [loading, setLoading] = useState(false);
 	const [codebox, setCodebox] = useState(false);
+	const [optimizability, setOptimizability] = useState(false);
 
 	const handleFileChange = (e: React.FormEvent<HTMLInputElement>) => {
 		if (e.currentTarget.files && e.currentTarget.files.length > 0) {
@@ -38,6 +39,8 @@ export default function Pages(){
 			    console.log(result);
 			    code=result.json.code_snippet;
 			    language=result.json.language;
+			    optimizedcode=result.json.optimized_code;
+			    setOptimizability(result.json.changes_made);
 			    setCodebox(true);
     			  } else {
     			    console.error('Failed to submit form');
@@ -74,8 +77,16 @@ export default function Pages(){
      }
 
      {codebox?(
-     <div className="w-1/2 mx-auto bg-gray-100 p-6 rounded-lg shadow-lg">
-     <CodeBox code={code} language={language} showLineNumbers={true}/></div>):(<p6></p6>)}
+     <div className="header flex">
+     <div className="w-1/2 mr-auto bg-gray-100 p-6  rounded-lg shadow-lg">
+     <h1 className="text-black">Original code</h1>
+     <CodeBox code={code} language={language} showLineNumbers={true}/>
+     </div>
+     {optimizability?(<div className="w-1/2 bg-gray-100 p-6 rounded-lg shadow-lg">
+     <h1 className="text-black">Optimized code</h1>
+     <CodeBox code={optimizedcode} language={language} showLineNumbers={true}/>
+     </div>):(<div></div>)}
+     </div>):(<p6></p6>)}
    </>
    );
 }
