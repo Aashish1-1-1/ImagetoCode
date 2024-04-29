@@ -22,7 +22,7 @@ const data = req.body;
     saveBase64Image(URL,path);
 
     // Function to save base64 image to file
-	function saveBase64Image(URL, image) {
+	function saveBase64Image(URL:string, image:any) {
 	 	 // Remove the data:image/jpeg;base64 prefix
 	 	 const base64Data = URL.replace(/^data:image\/\w+;base64,/, '');
 	 	 // Create a buffer from the base64 string
@@ -31,8 +31,8 @@ const data = req.body;
 	 	 // Write the buffer to a file
 	 	 fs.writeFileSync(image, imageBuffer);
 	}
-	await run(path).then(function(result){
-		exec(`rm -r ${path}`,(err,output)=>{
+	await run(path).then(function(result:any){
+		exec(`rm -r ${path}`,(err:any,fuck:number)=>{
 			if(err){
 				console.log("Couldn't delete file",err);
 				return

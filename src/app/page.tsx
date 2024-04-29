@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { ColorRing } from "react-loader-spinner";
-import CodeBox from './codebox.tsx';
+import CodeBox from './codebox';
 
 let code:string="";
 let optimizedcode:string=""
@@ -23,7 +23,7 @@ export default function Pages(){
 			reader.readAsDataURL(file); // Read file as data URL
 		}
 	};
-	const handlesubmit= async (e)=>{
+	const handlesubmit= async (e:any)=>{
 		setLoading(true)
 		e.preventDefault();
 		try{
@@ -86,7 +86,7 @@ export default function Pages(){
      <h1 className="text-black">Optimized code</h1>
      <CodeBox code={optimizedcode} language={language} showLineNumbers={true}/>
      </div>):(<div></div>)}
-     </div>):(<p6></p6>)}
+     </div>):(<p></p>)}
    </>
    );
 }

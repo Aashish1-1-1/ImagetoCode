@@ -5,7 +5,7 @@ require('dotenv').config()
 const genAI = new GoogleGenerativeAI(process.env.gemini_api);
 
 // Converts local file information to a GoogleGenerativeAI.Part object.
-function fileToGenerativePart(path, mimeType) {
+function fileToGenerativePart(path:string, mimeType:string) {
   return {
     inlineData: {
       data: Buffer.from(fs.readFileSync(path)).toString("base64"),
@@ -14,7 +14,7 @@ function fileToGenerativePart(path, mimeType) {
   };
 }
 
-async function run(path) {
+async function run(path:string) {
   // For text-and-image input (multimodal), use the gemini-pro-vision model
   const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
 

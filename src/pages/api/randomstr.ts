@@ -1,4 +1,4 @@
-const generateRandomString = (myLength) => {
+const generateRandomString = (myLength:number) => {
   const chars =
     "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890";
   const randomArray = Array.from(
