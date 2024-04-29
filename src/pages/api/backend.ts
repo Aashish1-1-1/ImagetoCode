@@ -39,9 +39,7 @@ const data = req.body;
 			}
 			console.log("Cleaned file")
 		})
-		res.status(200).json({
-			json:result
-		})
+		res.status(200).json(result)
 	});
 
 

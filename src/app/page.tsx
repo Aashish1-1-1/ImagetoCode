@@ -37,10 +37,10 @@ export default function Pages(){
 		if (response.ok) {
     			    const result = await response.json();
 			    console.log(result);
-			    code=result.json.code_snippet;
-			    language=result.json.language;
-			    optimizedcode=result.json.optimized_code;
-			    setOptimizability(result.json.changes_made);
+			    code=result.code_snippet;
+			    language=result.language;
+			    optimizedcode=result.optimized_code;
+			    setOptimizability(result.changes_made);
 			    setCodebox(true);
     			  } else {
     			    console.error('Failed to submit form');
