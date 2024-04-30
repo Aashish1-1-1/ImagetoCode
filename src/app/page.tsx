@@ -98,7 +98,7 @@ export default function Pages(){
      <CodeBox code={code} language={language} showLineNumbers={true}  />
      </div>
 
-     {optimizability?(<div className="w-auto rounded-lg shadow-lg py-5 ">
+     {optimizability?(<div className="w-auto rounded-lg shadow-lg py-5 lg:py-0">
      <h1 className=" text-white mb-2">Optimized code:</h1>
      <CodeBox code={optimizedcode} language={language} showLineNumbers={true}/>
      </div>):(<div></div>)}
