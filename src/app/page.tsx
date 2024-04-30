@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { ColorRing } from "react-loader-spinner";
 import CodeBox from './codebox';
-
+import Navbar from './navbar/navbar';
+import Footer from './navbar/footer';
 let code:string="";
 let optimizedcode:string=""
 let language:string=""
@@ -66,12 +67,14 @@ export default function Pages(){
      	   </div>
      ):(
       <div className="main2">
+      <Navbar/>
       <form className="w-full max-w-sm ml-80" onSubmit={handlesubmit}>
          <div className="flex items-center border-b border-teal-500 py-2">
             <input name="codeimg" className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="file" placeholder="Add code img" aria-label="codeimg" onChange={handleFileChange} accept="image/*"/>
             <button className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="submit">Submit</button>
          </div>
       </form>
+      <Footer/>
       </div>
       )
      }
