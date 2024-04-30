@@ -8,8 +8,6 @@ let code:string="";
 let optimizedcode:string=""
 let language:string=""
 
-
-
 export default function Pages(){
 	const [urlfile, setFile] = useState<string | null>(null);
 	const [loading, setLoading] = useState(false);
@@ -87,14 +85,14 @@ export default function Pages(){
 	 <div>
 	 {codebox?(
 	 
-		  <div className="flex flex-col justify-center items-center lg:flex-row  lg:space-x-5  lg:py-10 ">
+		  <div className="flex flex-col items-center lg:flex-row  lg:space-x-5  lg:py-10 ">
 	 
-		  <div className=" w-1/2  shadow-lg border-red-500 border-b-2 lg:border-b-0 lg:border-r-2 lg:px-5  py-10 lg:py-0">
+		  <div className=" w-full shadow-lg border-red-500 border-b-2 lg:border-b-0 lg:border-r-2 lg:px-5  py-10 lg:py-0">
 		  <h1 className="text-white mb-2 font-bold">Original code:</h1>
 		  <CodeBox code={code} language={language} showLineNumbers={true}  />
 		  </div>
 	 
-		  {optimizability?(<div className="w-1/2 rounded-lg shadow-lg py-5 lg:py-0">
+		  {optimizability?(<div className="w-full rounded-lg shadow-lg py-5 lg:py-0">
 		  <h1 className=" text-white mb-2">Optimized code:</h1>
 		  <CodeBox code={optimizedcode} language={language} showLineNumbers={true}/>
 		  </div>):(<div></div>)}
@@ -104,10 +102,6 @@ export default function Pages(){
 		 ):(<p></p>)}
 	 
 	 </div>
-	 
-	 
-	 
-		 
 	 </div>
       )
      } 

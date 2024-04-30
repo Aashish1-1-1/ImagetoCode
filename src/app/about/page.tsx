@@ -10,7 +10,7 @@ export default function pages(){
 			<div className='mt-10'>Follow us on twitter<br/>
 			<div className="text-blue-500 flex items-center space-x-4">
 			<a href="https://twitter.com/AashishAdh9">@AashishAdh9</a>
-			<a href="https://twitter.com/AashishAdh9">@Sannux</a></div>
+			<a href="https://twitter.com/sannux6">@Sannux</a></div>
 			</div>
 		</div>
 		
