@@ -5,7 +5,7 @@ export default function pages(){
 	<>
 		<div className="mt-28 ml-16 mr-16">
 
-			<h1>We come across many code snippets which are not in actual code format they can be in image or some visual form and what codify does is it convert that visual form of code into actual code and optimizes it if it can be optimized</h1>
+			<h1>Kodify bridges the gap between visual code snippets and actual code. It effortlessly converts visual formats like images into usable code while optimizing for efficiency whenever possible.</h1>
 			
 			<div className='mt-10'>Follow us on twitter<br/>
 			<div className="text-blue-500 flex items-center space-x-4">
