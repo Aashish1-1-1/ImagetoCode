@@ -9,25 +9,29 @@ We take image as a input from user/client save it to the server with randomized 
 
 ## Challenges we ran into
 
-It was little hard for us to save users image file in the client side. The workflow was saving users image in client side with random name so that other users can also use at same time without conflicting the name and store in client side.
+- We faced some inconsistent in result by gemini in same prompt,it some time changed the code completely producing different result and so on.
+
+- It was little hard for us to save users image file in the client side. The workflow was saving users image in client side with random name so that other users can also use at same time without conflicting the name and store in client side. 
 
 ## Accomplishments that we're proud of
 
-We have developed an optimized program writing memory efficient code where the user file is read and save temporary and it is deleted after a second so that it won;t get store to take unnecessary memory.
+We have developed an optimized program writing memory efficient code where the user file is read and save temporary and it is deleted after a second so that it won't get store to take unnecessary memory.
 
 The program is completely working. Users browser the image file, it get save in client side for few second so that the program can read the file can send to the gemini API to change image into the text and also provide the optimized version of the code.
 
 
 ## What we learned
 
-To write an optimized code, to create server  and client side effective code to browse image file and save it and send it ot the gemini api.
+- To write an optimized code, to create server  and client side effective code to browse image file and save it and send it to the gemini api.
+- To think about scalability and user experience.
 
 ## What's next for Codify
 
--We will be doing deployment 
--We will iteratively move to the most consistent and efficient prompt.
+- Deployment for Codify using google drive api.
+- We will iteratively move to the most consistent and efficient prompt.
 
 ##To run locally 
+
 Get your api key [here](https://aistudio.google.com/app/apikey)
 ```bash 
 git clone https://github.com/Aashish1-1-1/Kodify
