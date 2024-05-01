@@ -30,7 +30,7 @@ The program is completely working. Users browser the image file, it get save in 
 - Deployment for Codify using google drive api.
 - We will iteratively move to the most consistent and efficient prompt.
 
-##To run locally 
+## To run locally 
 
 Get your api key [here](https://aistudio.google.com/app/apikey)
 ```bash 
