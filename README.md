@@ -1,36 +1,41 @@
 ## Inspiration
-We come across many code snippets which are not in actual code format they can be in image or some visual form. 
+
+Dealing with code snippets in non-text formats, such as images, is not only tedious but often results in inefficient and unoptimized code. We're inspired to tackle this problem head-on.
 
 ## What it does
-What codify does is it convert that visual form of code into actual code and optimizes it if it can be optimized
+
+Kodify seamlessly translates visual code into actual code, optimizing it whenever feasible.
 
 ## How we built it
-We take image as a input from user/client save it to the server with randomized name so that it will not create problem with multiple user using at a same time and feed that image to Gemini API with proper prompt we parse the prompt to json  and send it as response to user. The response is displayed in client side with the image to code side code and the optimized version of the the code.
+
+We implemented a robust system that begins by securely handling user/client input: images are saved to the server with randomized names to prevent conflicts among multiple users. These images are then seamlessly processed through the Gemini API using customized prompts parsed into JSON format. Finally, the response – comprising both the original and optimized code – is elegantly displayed to the user on the client side.
 
 ## Challenges we ran into
 
-- We faced some inconsistent in result by gemini in same prompt,it some time changed the code completely producing different result and so on.
+- We encountered inconsistency in Gemini's results, where the same prompt sometimes generated vastly different outputs, posing challenges to maintaining code integrity.
 
-- It was little hard for us to save users image file in the client side. The workflow was saving users image in client side with random name so that other users can also use at same time without conflicting the name and store in client side. 
+- Implementing secure and efficient image file management on the client side proved challenging. We devised a workflow to save user images with randomized names to prevent conflicts and ensure smooth concurrent usage.
 
 ## Accomplishments that we're proud of
 
-We have developed an optimized program writing memory efficient code where the user file is read and save temporary and it is deleted after a second so that it won't get store to take unnecessary memory.
+- We developed a memory-efficient program that optimizes resource usage by reading and temporarily saving user files, promptly deleting them to prevent unnecessary memory consumption.
 
-The program is completely working. Users browser the image file, it get save in client side for few second so that the program can read the file can send to the gemini API to change image into the text and also provide the optimized version of the code.
+- Our fully functional program seamlessly handles user image uploads, swiftly processing them on the server side. It successfully leverages the Gemini API to convert images into text and deliver optimized code versions.
 
 
 ## What we learned
 
-- To write an optimized code, to create server  and client side effective code to browse image file and save it and send it to the gemini api.
-- To think about scalability and user experience.
+- Crafting optimized code for both server and client sides, streamlining processes for image file handling, and seamless integration with the Gemini API.
 
-## What's next for Codify
+- Prioritizing scalability and user experience, understanding the importance of accommodating growth while ensuring a smooth and intuitive user journey.
 
-- Deployment for Codify using google drive api.
-- We will iteratively move to the most consistent and efficient prompt.
+## What's next for Kodify
 
-## To run locally 
+- Deploying Codify with the Google Drive API integration for enhanced image file storage, ensuring robust data management and accessibility.
+- Continuously refining our prompt selection process to achieve the most consistent and efficient results, optimizing user experience and code accuracy.
+- Developing a browser extension version of Kodify, expanding accessibility and usability across different platforms.
+
+##To run locally 
 
 Get your api key [here](https://aistudio.google.com/app/apikey)
 ```bash 
@@ -40,5 +45,4 @@ echo gemini_api = "Your api">.env
 npm i
 npm run dev
 ```
-
 
