@@ -32,7 +32,7 @@ const data = req.body;
 	 	 fs.writeFileSync(image, imageBuffer);
 	}
 	await run(path).then(function(result:any){
-		exec(`rm -r ${path}`,(err:any,fuck:number)=>{
+		exec(`rm -r ${path}`,(err:any,option:any)=>{
 			if(err){
 				console.log("Couldn't delete file",err);
 				return
