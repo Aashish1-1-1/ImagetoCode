@@ -1,4 +1,5 @@
-##DEVPOST
+## DEVPOST
+
 [devpost](https://devpost.com/software/codify-uevra8)
 
 ## Inspiration
