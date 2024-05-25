@@ -1,3 +1,6 @@
+##DEVPOST
+[devpost](https://devpost.com/software/codify-uevra8)
+
 ## Inspiration
 
 Dealing with code snippets in non-text formats, such as images, is not only tedious but often results in inefficient and unoptimized code. We're inspired to tackle this problem head-on.
@@ -35,7 +38,7 @@ We implemented a robust system that begins by securely handling user/client inpu
 - Continuously refining our prompt selection process to achieve the most consistent and efficient results, optimizing user experience and code accuracy.
 - Developing a browser extension version of Kodify, expanding accessibility and usability across different platforms.
 
-##To run locally 
+## To run locally 
 
 Get your api key [here](https://aistudio.google.com/app/apikey)
 ```bash 
